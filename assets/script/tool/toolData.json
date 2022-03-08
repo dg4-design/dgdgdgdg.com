@@ -296,5 +296,63 @@
         "gen": "2020"
       }
     ]
+  },
+  {
+    "contentName": {
+      "en": "Music Instrument",
+      "ja": "楽器"
+    },
+    "items": [
+      {
+        "name": "SW108",
+        "maker": "ARCO",
+        "about": "Cajon"
+      },
+      {
+        "name": "5000CJ",
+        "maker": "DW",
+        "about": "Cajon pedal"
+      },
+      {
+        "name": "MUS1455M",
+        "maker": "Pearl",
+        "about": "Snare drum"
+      },
+      {
+        "name": "P-932",
+        "maker": "Pearl",
+        "about": "Drum pedal"
+      },
+      {
+        "name": "CC16MC-B",
+        "maker": "MEINL",
+        "about": "16\" clash cymbal"
+      },
+      {
+        "name": "CC12S-B",
+        "maker": "MEINL",
+        "about": "12\" splash cymbal"
+      },
+      {
+        "name": "PST-7 Crash",
+        "maker": "Paiste",
+        "about": "16\" clash cymbal"
+      },
+      {
+        "name": "PST-7 Splash",
+        "maker": "Paiste",
+        "about": "10\" splash cymbal"
+      },
+      {
+        "name": "PTM-10GH",
+        "maker": "Pearl",
+        "about": "Tambourine"
+      },
+      {
+        "name": "SH50",
+        "maker": "MEINL",
+        "about": "Shaker"
+      }
+    ]
   }
 ]
