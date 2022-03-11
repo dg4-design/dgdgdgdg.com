@@ -352,6 +352,11 @@
         "name": "SH50",
         "maker": "MEINL",
         "about": "Shaker"
+      },
+      {
+        "name": "STYLOPHONE S-1",
+        "maker": "Dubreq",
+        "about": "Pocket synthesizer"
       }
     ]
   }
