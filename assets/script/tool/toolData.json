@@ -325,6 +325,11 @@
         "about": "Snare drum"
       },
       {
+        "name": "Custom Snare Drum",
+        "maker": "Foldrum",
+        "about": "Floor tom and snare drum"
+      },
+      {
         "name": "P-932",
         "maker": "Pearl",
         "about": "Drum pedal"
