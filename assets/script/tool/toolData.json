@@ -109,6 +109,13 @@
         "storeLink": "https://amzn.to/37a5h4T"
       },
       {
+        "name": "Action 2",
+        "maker": "DJI",
+        "about": "Action camera",
+        "gen": "2021",
+        "storeLink": "https://amzn.to/3M26UQJ"
+      },
+      {
         "name": "X-700",
         "maker": "MINOLTA",
         "about": "Film camera",
@@ -348,67 +355,88 @@
       {
         "name": "SW108",
         "maker": "ARCO",
-        "about": "Cajon"
+        "about": "Cajon",
+        "storeLink": "https://amzn.to/3JBJQGX"
       },
       {
         "name": "5000CJ",
         "maker": "DW",
-        "about": "Cajon pedal"
+        "about": "Cajon pedal",
+        "storeLink": "https://amzn.to/3695MLZ"
       },
       {
         "name": "MUS1455M",
         "maker": "Pearl",
-        "about": "Snare drum"
+        "about": "Snare drum",
+        "storeLink": "https://amzn.to/3KFkIjW"
       },
       {
         "name": "Custom Snare Drum",
         "maker": "Foldrum",
-        "about": "Floor tom and snare drum"
+        "about": "Floor tom and snare drum",
+        "storeLink": "https://amzn.to/3O5eNGV"
       },
       {
         "name": "P-932",
         "maker": "Pearl",
-        "about": "Drum pedal"
+        "about": "Drum pedal",
+        "storeLink": "https://amzn.to/3uDsuFx"
       },
       {
         "name": "CC16MC-B",
         "maker": "MEINL",
-        "about": "16\" clash cymbal"
+        "about": "16\" clash cymbal",
+        "storeLink": "https://amzn.to/3KGyEKp"
       },
       {
         "name": "CC12S-B",
         "maker": "MEINL",
-        "about": "12\" splash cymbal"
+        "about": "12\" splash cymbal",
+        "storeLink": "https://amzn.to/3xl2gJD"
       },
       {
         "name": "PST-7 Crash",
         "maker": "Paiste",
-        "about": "16\" clash cymbal"
+        "about": "16\" clash cymbal",
+        "storeLink": "https://amzn.to/3KG9ZWi"
       },
       {
         "name": "PST-7 Splash",
         "maker": "Paiste",
-        "about": "10\" splash cymbal"
+        "about": "10\" splash cymbal",
+        "storeLink": "https://amzn.to/3jyUgMV"
       },
       {
         "name": "PTM-10GH",
         "maker": "Pearl",
-        "about": "Tambourine"
+        "about": "Tambourine",
+        "storeLink": "https://amzn.to/3xkyPax"
       },
       {
         "name": "SH50",
         "maker": "MEINL",
-        "about": "Shaker"
+        "about": "Shaker",
+        "storeLink": "https://amzn.to/3EdaBAy"
       },
       {
         "name": "taktile-25",
         "maker": "KORG",
-        "about": "Pocket synthesizer"
+        "about": "USB controller keyboard",
+        "gen": "2014",
+        "storeLink": "https://amzn.to/3JQ68oF"
+      },
+      {
+        "name": "VL-1",
+        "maker": "CASIO",
+        "about": "Calculator, a monophonic synthesizer, and sequencer",
+        "gen": "1979"
       },
       {
         "name": "STYLOPHONE S-1",
         "maker": "Dubreq",
-        "about": "Pocket synthesizer"
+        "about": "Pocket synthesizer",
+        "gen": "2007",
+        "storeLink": "https://amzn.to/3vew3RB"
       }
     ]
   }
