@@ -1,94 +1,94 @@
 const writeTools = (getData) => {
-  getData.forEach((cate) => {
-    const toolCate = document.createElement("section");
+  getData.forEach(({ contentName, items }) => {
+    const toolCate = c$("section");
     toolCate.className = "tool-category";
-    $("#toolPage").appendChild(toolCate);
+    g$("#toolPage").appendChild(toolCate);
 
-    const toolContain = document.createElement("div");
+    const toolContain = c$();
     toolContain.className = "container center";
     toolCate.appendChild(toolContain);
 
-    const cateTitle = document.createElement("h2");
+    const cateTitle = c$("h2");
     cateTitle.className = "center";
     toolContain.appendChild(cateTitle);
 
-    const titleEn = document.createElement("span");
+    const titleEn = c$("span");
     titleEn.className = "en";
-    titleEn.textContent = cate.contentName.en;
+    titleEn.textContent = contentName.en;
     cateTitle.appendChild(titleEn);
 
-    const titleJa = document.createElement("span");
+    const titleJa = c$("span");
     titleJa.className = "ja";
-    titleJa.textContent = cate.contentName.ja;
+    titleJa.textContent = contentName.ja;
     cateTitle.appendChild(titleJa);
 
-    const toolWrapper = document.createElement("div");
+    const toolWrapper = c$();
     toolWrapper.className = "tool-wrapper";
     toolCate.appendChild(toolWrapper);
 
-    const toolList = document.createElement("div");
+    const toolList = c$();
     toolList.className = "tool-list center is-flex";
     toolWrapper.appendChild(toolList);
 
-    cate.items.forEach((cateItem) => {
-      const toolItem = document.createElement("div");
+    items.forEach(({ name, maker, about, gen, storeId }) => {
+      const toolItem = c$();
       toolItem.className = "tool-item";
       toolList.appendChild(toolItem);
 
-      const toolItemCover = document.createElement("div");
+      const toolItemCover = c$();
       toolItemCover.className = "cover click";
       toolItem.appendChild(toolItemCover);
 
-      const coverImage = document.createElement("img");
-      const fmtMaker = cateItem.maker.toLowerCase().replace(/[."+() -]/g, "");
-      const fmtName = cateItem.name.toLowerCase().replace(/[."+() -]/g, "");
+      const coverImage = c$("img");
+      const fmtMaker = maker.toLowerCase().replace(/[."+() -]/g, "");
+      const fmtName = name.toLowerCase().replace(/[."+() -]/g, "");
       coverImage.src = `/assets/image/tool/${fmtMaker}-${fmtName}.png`;
       toolItemCover.appendChild(coverImage);
 
-      const toolItemModal = document.createElement("div");
-      toolItemModal.className = "modal is-flex";
+      const toolItemModal = c$();
+      toolItemModal.className = "modal";
       toolItem.appendChild(toolItemModal);
 
-      let cardImage;
-      if (cateItem.storeLink) {
-        cardImage = document.createElement("a");
-        cardImage.href = cateItem.storeLink;
-        cardImage.target = "_blank";
-        cardImage.rel = "noopener noreferrer";
-      } else {
-        cardImage = document.createElement("div");
-      }
-      cardImage.className = "img";
-      toolItemModal.appendChild(cardImage);
-
-      const cardImageInner = document.createElement("img");
-      cardImageInner.src = coverImage.src;
-      cardImage.appendChild(cardImageInner);
-
-      const cardDesc = document.createElement("div");
-      cardDesc.className = "desc";
-      toolItemModal.appendChild(cardDesc);
-
-      const descName = document.createElement("div");
-      descName.className = "name";
-      descName.textContent = cateItem.name;
-      cardDesc.appendChild(descName);
-
-      const descMakerNGen = document.createElement("div");
-      descMakerNGen.className = "maker-and-gen";
-      descMakerNGen.textContent = cateItem.maker;
-      cateItem.gen &&
-        (descMakerNGen.textContent = `${cateItem.maker}・${cateItem.gen}`);
-      cardDesc.appendChild(descMakerNGen);
-
-      const descAbout = document.createElement("div");
-      descAbout.className = "about";
-      descAbout.textContent = cateItem.about;
-      cardDesc.appendChild(descAbout);
-
-      const modalCloseBtn = document.createElement("div");
+      const modalCloseBtn = c$();
       modalCloseBtn.className = "close-btn center click";
       toolItemModal.appendChild(modalCloseBtn);
+
+      const scroll = c$();
+      scroll.className = "scroll is-flex";
+      toolItemModal.appendChild(scroll);
+
+      const cardImage = c$("img");
+      cardImage.src = coverImage.src;
+      scroll.appendChild(cardImage);
+
+      const cardDesc = c$();
+      cardDesc.className = "desc";
+      scroll.appendChild(cardDesc);
+
+      const descName = c$();
+      descName.className = "name";
+      descName.textContent = name;
+      cardDesc.appendChild(descName);
+
+      const descMakerNGen = c$();
+      descMakerNGen.className = "maker-and-gen";
+      descMakerNGen.textContent = gen ? `${maker}・${gen}` : `${maker}`;
+      cardDesc.appendChild(descMakerNGen);
+
+      const descAbout = c$();
+      descAbout.className = "about";
+      descAbout.textContent = about;
+      cardDesc.appendChild(descAbout);
+
+      if (storeId) {
+        const descLink = c$("a");
+        descLink.href = `https://amzn.to/${storeId}`;
+        descLink.className = "link";
+        descLink.target = "_blank";
+        descLink.rel = "noopener noreferrer";
+        descLink.textContent = "Amazon";
+        cardDesc.appendChild(descLink);
+      }
 
       const modalEvent = (elm) => {
         elm.addEventListener("click", () => {

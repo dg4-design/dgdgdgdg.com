@@ -1,4 +1,4 @@
-const $ = (target, doc = document) => {
+const g$ = (target, doc = document) => {
   if (target[0] === "#") {
     const Elm = doc.getElementById(`${target.slice(1)}`);
     return Elm ? Elm : undefined;
@@ -11,4 +11,9 @@ const $ = (target, doc = document) => {
   }
 };
 
-window.addEventListener("load", () => $("#loadElm") && $("#loadElm").remove());
+const c$ = (elm = "div") => document.createElement(elm);
+
+window.addEventListener(
+  "load",
+  () => g$("#loadElm") && g$("#loadElm").remove()
+);

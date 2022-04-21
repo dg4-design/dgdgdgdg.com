@@ -9,8 +9,12 @@ const writeTools = (getData) => {
   };
 
   // itemsを統合・シャッフル・奇数個の場合末尾切り捨て
-  planeItems = [];
-  getData.forEach((content) => planeItems.push(...content.items));
+  const planeItems = getData
+    .map(({ items }) => items)
+    .reduce((e, i) => {
+      return e.concat(i);
+    });
+
   const shuffledItems = shuffle(planeItems);
   if (shuffledItems.length % 2 === 1) shuffledItems.pop();
 
@@ -26,16 +30,16 @@ const writeTools = (getData) => {
 
   const fakeLoop = () => {
     slicedItems.forEach((twoItems) => {
-      const toolItem = document.createElement("div");
+      const toolItem = c$();
       toolItem.className = "tool-item swiper-slide";
-      $("#toolList").appendChild(toolItem);
+      g$("#toolList").appendChild(toolItem);
 
       twoItems.forEach((item) => {
-        const toolItemChild = document.createElement("div");
+        const toolItemChild = c$();
         toolItemChild.className = "tool-item-child";
         toolItem.appendChild(toolItemChild);
 
-        const itemImage = document.createElement("img");
+        const itemImage = c$("img");
         const fmtMaker = item.maker.toLowerCase().replace(/[."+() -]/g, "");
         const fmtName = item.name.toLowerCase().replace(/[."+() -]/g, "");
         itemImage.src = `/assets/image/tool/${fmtMaker}-${fmtName}.png`;
